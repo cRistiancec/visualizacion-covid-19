@@ -44,11 +44,11 @@ data_covid  <-
   archivo_covid %>% 
   read_excel() %>%
   select(
-    "fecha" = DateRep,
-    "casos_nuevos" = Cases,
-    "muertes_nuevas" = Deaths,
-    "region" = `Countries and territories`,
-    "geo_id" = GeoId
+    "fecha" = dateRep,
+    "casos_nuevos" = cases,
+    "muertes_nuevas" = deaths,
+    "region" = countriesAndTerritories,
+    "geo_id" = geoId
   ) %>% 
   mutate_at("fecha", ymd)
 
